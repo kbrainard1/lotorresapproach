@@ -14,7 +14,6 @@ body {
   font-weight: lighter;
 }
 
-
 p,
 ul {
   line-height: 1.5;
@@ -418,8 +417,6 @@ details p {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .mobile_sub_heading_inner {
   grid-row: 4 / 7;
