@@ -15,7 +15,8 @@ body {
 }
 
 
-p, ul {
+p,
+ul {
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--site-brown);
@@ -78,9 +79,10 @@ h1 {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Position right below the trigger button */
+  top: 100%;
+  /* Position right below the trigger button */
   left: 0;
-  
+
   /* Hide by default */
   display: none;
   z-index: 1000;
@@ -157,7 +159,7 @@ header {
 
 .schedule_link .site_button {
   background-color: white;
-  color: var(--site-brown); 
+  color: var(--site-brown);
 }
 
 .schedule_link a {
@@ -338,12 +340,12 @@ main a {
   padding: 30px 15%;
 }
 
- .about_coursework p {
+.about_coursework p {
   padding: 10px;
   color: white;
   font-size: 18pt;
   font-family: 'Times New Roman', Times, serif;
- }
+}
 
 .about_coursework li {
   padding: 5px;
@@ -383,12 +385,12 @@ details p {
   border-radius: 3px;
   background-color: var(--site-green);
   margin-top: 6px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .ham_nav {
-  transition: all 0.3s ease-in-out;
-  display: none;
+  display: contents;
+
 }
 
 #toggle {
@@ -403,17 +405,18 @@ details p {
   padding-left: 0%;
   padding-right: 10px;
   padding-bottom: 10px;
-  top: 80px;
   position: absolute;
   z-index: 2;
+  top: 80px;
+  overflow: hidden;
+  max-height: 0px;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav_mobile_inner {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--site-light-green);
-   box-shadow: -1px -1px 3px 1px var(--site-light-green);
 }
 
 .mobile_sub_heading_inner {
@@ -429,7 +432,8 @@ details p {
   background-color: var(--site-light-green);
 }
 
-.nav_mobile a, .nav_mobile p {
+.nav_mobile a,
+.nav_mobile p {
   padding: 7px 15px;
   margin: 0px;
   font-size: 14pt;
@@ -463,20 +467,29 @@ details p {
   }
 }
 
-  /**
+/**
 Animations
 **/
 
-  #toggle:checked+.hamburger .htop {
-    transform: rotate(-45deg);
-    margin-top: 25px;
-  }
+#toggle:checked~.ham_nav .nav_mobile {
+  max-height: 500px;
+}
 
-  #toggle:checked+.hamburger .hbottom {
-    opacity: 0;
-  }
+#toggle:checked~.ham_nav .nav_mobile_inner {
+  border-top: 1px solid var(--site-light-green);
+  box-shadow: -1px -1px 3px 1px var(--site-light-green);
+}
 
-  #toggle:checked+.hamburger .hmid {
-    transform: rotate(45deg);
-    margin-top: -7px;
-  }
+#toggle:checked+.hamburger .htop {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+
+#toggle:checked+.hamburger .hbottom {
+  opacity: 0;
+}
+
+#toggle:checked+.hamburger .hmid {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
