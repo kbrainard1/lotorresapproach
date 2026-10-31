@@ -414,22 +414,29 @@ details p {
 }
 
 .nav_mobile_inner {
-  background-color: white;
+  background-color:var(--site-light-green);
   display: flex;
   flex-direction: column;
 }
+
+
 
 .mobile_sub_heading_inner {
   grid-row: 4 / 7;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  background-color: white;
+  padding-left: 30px;
+  background-color: var(--site-light-green);
 }
 
 .nav_mobile p {
   text-align: left;
-  background-color: var(--site-light-green);
+  font-style: italic;
+}
+
+.mobile_sub_heading {
+  color: var(--site-brown);
+  background-color: white;
 }
 
 .nav_mobile a,
