@@ -14,17 +14,6 @@ setInterval(() => {
 }, 8000);
 
 function drawGallery() {
-    var dotDiv = document.getElementById("gallery_dot_progress");
-    var limit = document.getElementById("full_available_list").childElementCount
-    for (let i = 0; i < limit; i++) {
-        var newDot = document.createElement("div");
-        newDot.className = "gallery_dot";
-        dotDiv.appendChild(newDot);
-    }
-
-    var width = document.querySelector(".nav_box_mobile").width;
-    var remainingWidth = width - (limit * 20);
-    dotDiv.style = "margin-left: " + (remainingWidth / 2) + "px; grid-column: 1 / 3;";
     displayImage(false);
 }
 
@@ -66,12 +55,6 @@ async function displayImage(fade) {
 
     textPara.textContent = reviewText;
     authorPara.textContent = reviewAuthor;
-
-    var dotProgress = document.getElementById("gallery_dot_progress");
-    for (let i = 0; i < dotProgress.childElementCount; i++) {
-        dotProgress.children[i].style = "background-color: lightgrey;";
-    }
-    dotProgress.children[carouselIndex].style = "background-color: darkgrey;";
 
     if (fade) {
         const fade1 = fadeElem(textPara, 0, 1);
