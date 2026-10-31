@@ -13,11 +13,8 @@ body {
   font-weight: lighter;
 }
 
-main {
-  padding: 10px;
-}
 
-p {
+p, ul {
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--site-brown);
@@ -191,7 +188,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .intro_section_inner {
@@ -202,7 +199,7 @@ footer {
   flex-direction: column;
 }
 
-.home_image {
+.intro_section img {
   max-width: 500px;
   width: 100%;
 }
@@ -335,7 +332,30 @@ footer {
   margin-top: 10px;
 }
 
+main a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--site-green);
+}
 
+.about_coursework {
+  background-color: var(--site-green);
+  margin: 0px;
+  padding: 30px 15%;
+}
+
+ .about_coursework p {
+  padding: 10px;
+  color: white;
+  font-size: 18pt;
+  font-family: 'Times New Roman', Times, serif;
+ }
+
+.about_coursework li {
+  padding: 5px;
+  color: white;
+  font-size: 12pt;
+}
 
 /* Mobile (or tiny desktop) */
 
@@ -401,7 +421,7 @@ footer {
 
 .nav_mobile p {
   text-align: left;
-  background-color: lightgrey;
+  background-color: rgb(210, 220, 210);
 }
 
 .nav_mobile a, .nav_mobile p {
